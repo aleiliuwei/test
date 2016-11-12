@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>map</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <table>
+    	<tr  th:each="user:${usermap}">
+    		<td th:text="${user.key}">a</td>
+    		<td th:text="${user.value.name}">hhh</td>
+    	</tr>
+    </table>
+    <hr>
+     总数:<input type="text" style="border:0px" value="0" th:value="${#maps.size(usermap)}"/><br>
+     是否为空：<input type="text" style="border:0px" value="0" th:value="${#maps.isEmpty(usermap)}"/>
+ 
+</body>
+</html>
